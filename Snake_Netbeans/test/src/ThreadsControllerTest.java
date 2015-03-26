@@ -5,6 +5,13 @@
  */
 package src;
 
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -40,14 +47,37 @@ public class ThreadsControllerTest {
     /**
      * Test of run method, of class ThreadsController.
      */
-    @Test
+    /*@Test
     public void testRun() {
         System.out.println("run");
-        Tuple pd = new Tuple(0,0);
+        boolean test = false;
+        Window testwindow = new Window();
+        Tuple pd = new Tuple(10,10);
         ThreadsController instance = new ThreadsController(pd);
-        instance.run();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+        ExecutorService executor = Executors.newCachedThreadPool();
+        Runnable task = new Runnable() {
+            public void run() {
+                instance.run();
+            }
+        };
+        Future<Object> future = executor.execute(task.run());
+        try {
+            Object result = future.get(5, TimeUnit.SECONDS);
+        } catch (TimeoutException ex) {
+            // handle the timeout
+            test = true;
+        } catch (InterruptedException e) {
+            // handle the interrupts
+            test = false;
+        } catch (ExecutionException e) {
+            // handle other exceptions
+            test = false;
+        } finally {
+            assertEquals(true, test);
+        }
+        
+
+
+    }*/
     
 }
