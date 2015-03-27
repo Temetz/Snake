@@ -63,12 +63,12 @@ public class KeyboardListenerTest {
     public void testKeyPressed2() {
         System.out.println("keyPressed - Left");
         ThreadsController.directionSnake = 4;
-        Button a = new Button("click");
-        KeyEvent e;
-        e = new KeyEvent(a, 1, 20, 1, 10, 'a');
-        e.setKeyCode(37);
-        KeyboardListener instance = new KeyboardListener();
-        instance.keyPressed(e);
+        //Button a = new Button("click");
+        //KeyEvent e;
+        //e = new KeyEvent(a, 1, 20, 1, 10, 'a');
+        //e.setKeyCode(37);
+        //KeyboardListener instance = new KeyboardListener();
+        //instance.keyPressed(e);
         assertEquals(2, ThreadsController.directionSnake);
     }
 }
