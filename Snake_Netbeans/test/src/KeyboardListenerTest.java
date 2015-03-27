@@ -6,8 +6,8 @@
 package src;
 
 import java.awt.Button;
+import java.awt.Container;
 import java.awt.event.KeyEvent;
-import javax.swing.JPanel;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -47,9 +47,10 @@ public class KeyboardListenerTest {
     public void testKeyPressed1() {
         System.out.println("keyPressed - Right");
         ThreadsController.directionSnake = 3;
-        Button a = new Button("click");
+        //Button a = new Button("click");
+        Container b = new Container();
         KeyEvent e;
-        e = new KeyEvent(a, 1, 20, 1, 10, 'a');
+        e = new KeyEvent(b, 1, 20, 1, 10, 'a');
         e.setKeyCode(39);
         KeyboardListener instance = new KeyboardListener();
         instance.keyPressed(e);
