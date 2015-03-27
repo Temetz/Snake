@@ -47,7 +47,7 @@ public class ThreadsControllerTest {
     /**
      * Test of run method, of class ThreadsController.
      */
-    /*@Test
+    @Test
     public void testRun() {
         System.out.println("run");
         boolean test = false;
@@ -60,7 +60,7 @@ public class ThreadsControllerTest {
                 instance.run();
             }
         };
-        Future<Object> future = executor.execute(task.run());
+        Future future = executor.submit(task);
         try {
             Object result = future.get(5, TimeUnit.SECONDS);
         } catch (TimeoutException ex) {
@@ -69,15 +69,15 @@ public class ThreadsControllerTest {
         } catch (InterruptedException e) {
             // handle the interrupts
             test = false;
+            future.cancel(true); // true to interrupt if running
         } catch (ExecutionException e) {
             // handle other exceptions
             test = false;
+            future.cancel(true); // true to interrupt if running
         } finally {
             assertEquals(true, test);
         }
         
-
-
-    }*/
+    }
     
 }
