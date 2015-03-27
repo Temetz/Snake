@@ -3,14 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/src/src/Tuple.java</file>
-            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/src/src/Window.java</file>
-            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/src/src/ThreadsController.java</file>
-            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/src/src/SquarePanel.java</file>
-            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/src/src/Main.java</file>
-            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/src/src/KeyboardListener.java</file>
-            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/src/src/DataOfSquare.java</file>
-            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/test/src/DataOfSquareTest.java</file>
+            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/Snake_Netbeans/src/src/ThreadsController.java</file>
+            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/Snake_Netbeans/test/src/ThreadsControllerTest.java</file>
+            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/Snake_Netbeans/src/src/Tuple.java</file>
+            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/Snake_Netbeans/src/src/SquarePanel.java</file>
+            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/Snake_Netbeans/src/src/Main.java</file>
+            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/Snake_Netbeans/src/src/Window.java</file>
+            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/Snake_Netbeans/src/src/DataOfSquare.java</file>
+            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/Snake_Netbeans/test/src/DataOfSquareTest.java</file>
+            <file>file:/C:/Users/Tarleena_2/Documents/GitHub/Snake/Snake_Netbeans/test/src/KeyboardListenerTest.java</file>
         </group>
     </open-files>
 </project-private>
