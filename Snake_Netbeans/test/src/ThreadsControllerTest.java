@@ -47,9 +47,9 @@ public class ThreadsControllerTest {
     /**
      * Test of run method, of class ThreadsController.
      */
-    /*@Test
+    @Test
     public void testRun() {
-        System.out.println("run");
+        /*System.out.println("run");
         boolean test = false;
         //Window testwindow = new Window(); //THIS
         Tuple pd = new Tuple(10,10);
@@ -77,7 +77,7 @@ public class ThreadsControllerTest {
         } finally {
             assertEquals(true, test);
         }
-        
-    }*/
+        */
+    }
     
 }
