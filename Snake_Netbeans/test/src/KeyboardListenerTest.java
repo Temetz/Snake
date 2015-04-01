@@ -5,7 +5,6 @@
  */
 package src;
 
-import java.awt.Button;
 import java.awt.Container;
 import java.awt.event.KeyEvent;
 import org.junit.After;
