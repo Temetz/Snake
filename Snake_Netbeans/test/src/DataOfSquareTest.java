@@ -39,14 +39,38 @@ public class DataOfSquareTest {
 
     /**
      * Test of lightMeUp method, of class DataOfSquare.
+     * When block is blue (food)
      */
     @Test
-    public void testLightMeUp() {
-        System.out.println("lightMeUp");
+    public void testLightMeUp1() {
+        System.out.println("lightMeUp - food, blue, 1");
         int c = 1;
         DataOfSquare instance = new DataOfSquare(0);
         instance.lightMeUp(c);
         assertEquals(instance.square.getBackground(), instance.C.get(c));
     }
-    
+    /**
+     * Test of lightMeUp method, of class DataOfSquare.
+     * When block is darkGray (empty)
+     */
+    @Test
+    public void testLightMeUp2() {
+        System.out.println("lightMeUp - empty, Dark Gray, 0");
+        int c = 0;
+        DataOfSquare instance = new DataOfSquare(1);
+        instance.lightMeUp(c);
+        assertEquals(instance.square.getBackground(), instance.C.get(c));
+    }
+        /**
+     * Test of lightMeUp method, of class DataOfSquare.
+     * When block is white (snake)
+     */
+    @Test
+    public void testLightMeUp3() {
+        System.out.println("lightMeUp - snake, white, 2");
+        int c = 2;
+        DataOfSquare instance = new DataOfSquare(0);
+        instance.lightMeUp(c);
+        assertEquals(instance.square.getBackground(), instance.C.get(c));
+    }
 }
