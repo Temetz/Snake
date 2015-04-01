@@ -62,18 +62,17 @@ public class ThreadsControllerTest {
         };
         Future future = executor.submit(task);
         try {
-            Object result = future.get(5, TimeUnit.SECONDS);
+            Object result = future.get(5, TimeUnit.SECONDS);          
         } catch (TimeoutException ex) {
             // handle the timeout
             test = true;
+            future.cancel(true); // true to interrupt if running
         } catch (InterruptedException e) {
             // handle the interrupts
             test = false;
-            future.cancel(true); // true to interrupt if running
         } catch (ExecutionException e) {
             // handle other exceptions
             test = false;
-            future.cancel(true); // true to interrupt if running
         } finally {
             assertEquals(true, test);
         }
