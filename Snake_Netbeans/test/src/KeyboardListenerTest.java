@@ -42,10 +42,11 @@ public class KeyboardListenerTest {
 
     /**
      * Test of keyPressed method, of class KeyboardListener.
+     * Pressed key is Right
      */
     @Test
     public void testKeyPressed1() {
-        System.out.println("keyPressed - Right");
+        System.out.println("keyPressed - Right - not opposite direction");
         ThreadsController.directionSnake = 3;
         Container b = new Container();
         KeyEvent e;
@@ -55,12 +56,29 @@ public class KeyboardListenerTest {
         instance.keyPressed(e);
         assertEquals(1, ThreadsController.directionSnake);
     }
-        /**
+    /**
      * Test of keyPressed method, of class KeyboardListener.
+     * Pressed key is Right - is opposite direction
      */
     @Test
     public void testKeyPressed2() {
-        System.out.println("keyPressed - Left");
+        System.out.println("keyPressed - Right - IS opposite direction");
+        ThreadsController.directionSnake = 2;
+        Container c = new Container();
+        KeyEvent e;
+        e = new KeyEvent(c, 1, 20, 1, 10, 'a');
+        e.setKeyCode(39);
+        KeyboardListener instance = new KeyboardListener();
+        instance.keyPressed(e);
+        assertEquals(2, ThreadsController.directionSnake);
+    }
+    /**
+     * Test of keyPressed method, of class KeyboardListener.
+     * Pressed key is Left
+     */
+    @Test
+    public void testKeyPressed3() {
+        System.out.println("keyPressed - Left - not opposite direction");
         ThreadsController.directionSnake = 4;
         Container c = new Container();
         KeyEvent e;
@@ -69,5 +87,21 @@ public class KeyboardListenerTest {
         KeyboardListener instance = new KeyboardListener();
         instance.keyPressed(e);
         assertEquals(2, ThreadsController.directionSnake);
+    }
+    /**
+     * Test of keyPressed method, of class KeyboardListener.
+     * Pressed key is Left - is opposite direction
+     */
+    @Test
+    public void testKeyPressed4() {
+        System.out.println("keyPressed - Left - IS opposite direction");
+        ThreadsController.directionSnake = 1;
+        Container c = new Container();
+        KeyEvent e;
+        e = new KeyEvent(c, 1, 20, 1, 10, 'a');
+        e.setKeyCode(37);
+        KeyboardListener instance = new KeyboardListener();
+        instance.keyPressed(e);
+        assertEquals(1, ThreadsController.directionSnake);
     }
 }
