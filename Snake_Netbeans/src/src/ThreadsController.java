@@ -32,6 +32,7 @@ public class ThreadsController extends Thread {
 	 }
 	 
 	 //Important part :
+
 	 public void run() {
 		 while(true){
 			 moveInterne(directionSnake);

@@ -20,6 +20,7 @@ public class DataOfSquare {
 		square = new SquarePanel(C.get(color));
 	}
 	public void lightMeUp(int c){
+                color = c;
 		square.ChangeColor(C.get(c));
 	}
 }

@@ -5,13 +5,7 @@
  */
 package src;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
+import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -21,10 +15,11 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Tarleena_2
+ * @author SSDTEMETZ
  */
 public class ThreadsControllerTest {
     
+    Window ins;
     public ThreadsControllerTest() {
     }
     
@@ -38,6 +33,7 @@ public class ThreadsControllerTest {
     
     @Before
     public void setUp() {
+        this.ins = new Window();
     }
     
     @After
@@ -45,39 +41,40 @@ public class ThreadsControllerTest {
     }
 
     /**
-     * Test of run method, of class ThreadsController.
+     * Test that we have a food block at the start of the game.
      */
     @Test
-    public void testRun() {
-        /*System.out.println("run");
-        boolean test = false;
-        //Window testwindow = new Window(); //THIS
-        Tuple pd = new Tuple(10,10);
-        ThreadsController instance = new ThreadsController(pd);
-        //instance.foodPosition = new Tuple(2,2); //OR THIS AND OTHER PROPERTIES
-        ExecutorService executor = Executors.newCachedThreadPool();
-        Runnable task = new Runnable() {
-            public void run() {
-                instance.run();
-            }
-        };
-        Future future = executor.submit(task);
-        try {
-            Object result = future.get(5, TimeUnit.SECONDS);          
-        } catch (TimeoutException ex) {
-            // handle the timeout
-            test = true;
-            future.cancel(true); // true to interrupt if running
-        } catch (InterruptedException e) {
-            // handle the interrupts
-            test = false;
-        } catch (ExecutionException e) {
-            // handle other exceptions
-            test = false;
-        } finally {
-            assertEquals(true, test);
+    public void foodSpawnTest() {
+        System.out.println("food spawned correctly?");
+        ThreadsController instance = ins.c;
+        boolean foodfound = false;
+        for(int i = 0; i < instance.Squares.size(); i++){
+            for(int x = 0; x < instance.Squares.get(i).size(); x++){
+                if(instance.Squares.get(i).get(x).color == 1){
+                    foodfound = true;
+                }
+            }  
         }
-        */
-    }
+        assertEquals(true,foodfound);
+        
+    }    
     
+    /**
+     * Test snakes head is in the start position.
+     */
+    @Test
+    public void snakeSpawnTest() {
+        System.out.println("snake spawned inside window?");
+        Window win = new Window();
+        ThreadsController instance = ins.c;
+        boolean snakefound = false;
+        for(int i = 0; i < instance.Squares.size(); i++){
+            for(int x = 0; x < instance.Squares.get(i).size(); x++){
+                if(instance.Squares.get(i).get(x).color == 0){
+                    snakefound = true;
+                }
+            }  
+        }
+        assertEquals(true,snakefound); 
+    }    
 }
